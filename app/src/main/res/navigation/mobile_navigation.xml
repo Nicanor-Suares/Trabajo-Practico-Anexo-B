@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_actividad">
+
+    <fragment
+        android:id="@+id/nav_actividad"
+        android:name="com.example.trabajoprcticoanexob.ui.home.ActividadFragment"
+        android:label="@string/menu_actividad"
+        tools:layout="@layout/fragment_actividad">
+        <action
+            android:id="@+id/action_nav_actividad_to_descripcionFragment"
+            app:destination="@id/descripcionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/descripcionFragment"
+        android:name="com.example.trabajoprcticoanexob.DescripcionFragment"
+        android:label="fragment_descripcion"
+        tools:layout="@layout/fragment_descripcion" >
+        <action
+            android:id="@+id/action_descripcionFragment_to_nav_actividad"
+            app:destination="@id/nav_actividad" />
+    </fragment>
+</navigation>
