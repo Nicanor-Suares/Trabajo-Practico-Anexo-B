@@ -4,16 +4,19 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.trabajoprcticoanexob.model.Actividad;
+
 public class ActividadViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private MutableLiveData<Actividad> actividadLiveData = new MutableLiveData<>();
 
     public ActividadViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
-    }
 
-    public LiveData<String> getText() {
-        return mText;
+    }
+    public LiveData<Actividad> getActividad() {
+        return actividadLiveData;
+    }
+    public void setActividad(Actividad actividad) {
+        this.actividadLiveData.setValue(actividad);
     }
 }

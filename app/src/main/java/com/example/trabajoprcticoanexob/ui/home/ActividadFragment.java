@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class ActividadFragment extends Fragment {
     private FragmentActividadBinding binding;
-
+    private ActividadViewModel actividadViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         ActividadViewModel actividadViewModel =

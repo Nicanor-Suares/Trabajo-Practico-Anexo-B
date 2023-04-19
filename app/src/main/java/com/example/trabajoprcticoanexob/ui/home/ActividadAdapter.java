@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.ViewModel;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,7 @@ public class ActividadAdapter extends RecyclerView.Adapter<ActividadAdapter.Acti
     private Context context;
     private List<Actividad> actividades;
     private LayoutInflater inflater;
+    private ActividadViewModel actividadViewModel;
 
     public ActividadAdapter(Context context, List<Actividad> actividades, LayoutInflater inflater) {
         this.context = context;
